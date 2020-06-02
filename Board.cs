@@ -3,7 +3,7 @@ namespace Tetris{
   class Board{
 		public bool[][] Units;
 		public static int Width = 15, Height = 20;
-        
+		
 		public Board(){
 			Units = new bool[Height][];
 			for(int y = 0; y < Height; y++){
@@ -21,19 +21,19 @@ namespace Tetris{
 				}
 
 				bool temp = true;
-                //Checks if line is full.
+				//Checks if line is full.
 				for(int i = 0; i < Width; i++){
 					temp = temp && Units[y][i];
 				}
-                //Converts the full line into an empty one.
+				//Converts the full line into an empty one.
 				if(temp){
 					for(int i = 0; i < Width; i++){
 						Units[y][i] = false;
 					}
 				}
 				//Reuses variable
-                temp = true;
-                //Checks if there is an empty line.
+				temp = true;
+				//Checks if there is an empty line.
 				for(int i = 0; i < Width; i++){
 					temp = temp && !Units[y][i];
 				}
