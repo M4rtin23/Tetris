@@ -17,42 +17,42 @@ namespace Tetris{
 				if(collition()){
 					place();
 					selectShape(new Random(x*y).Next(1, 7));
-                    //restart position.
+					//restart position.
 					x = Board.Width/2;
 					y = -2;
 				}else{
 					y++;
 				}
-                draw();
+				draw();
 			}else{
 				switch(Console.ReadKey(true).Key){
 					case ConsoleKey.A:
 						if(checkLeft()){
 							x--;
 						}
-    					break;
+						break;
 			
-            		case ConsoleKey.D:
+					case ConsoleKey.D:
 						if(checkRight()){
 							x++;
 						}
-	    				break;
+						break;
 			
-            		case ConsoleKey.S:
+					case ConsoleKey.S:
 						rotate();
-		    			break;
+						break;
 				}
 			}
 		}
 
-        private void draw(){
-            for(int i = 0; i < 4; i++){
-                if(subY[i] + y >= 0){
-                    Console.SetCursorPosition(subX[i]+x, subY[i]+y);
-                    Console.WriteLine(1);
-                }
-            }
-        }
+		private void draw(){
+			for(int i = 0; i < 4; i++){
+				if(subY[i] + y >= 0){
+					Console.SetCursorPosition(subX[i]+x, subY[i]+y);
+					Console.WriteLine(1);
+				}
+			}
+		}
 
 		private void rotate(){
 			for(int i = 0; i < 4; i++){
@@ -154,7 +154,7 @@ namespace Tetris{
 			return result;
 		}
 
-        #region shapes
+		#region shapes
 		void shape1(){
 			subX[1] = 1;
 			subY[1] = 0;
