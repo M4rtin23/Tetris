@@ -1,6 +1,6 @@
 using System;
 namespace Tetris{
-  class Board{
+	class Board{
 		public bool[][] Units;
 		public static int Width = 15, Height = 20;
 		

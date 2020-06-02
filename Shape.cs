@@ -1,6 +1,6 @@
 using System;
 namespace Tetris{
-   	class Shape{
+	class Shape{
 		int x, y;
 		int[] subX = new int[4], subY = new int[4];
 
@@ -206,10 +206,8 @@ namespace Tetris{
 		void shape7(){
 			subX[1] = -1;
 			subY[1] = -1;
-
 			subX[2] = 1;
 			subY[2] = 0;
-			
 			subX[3] = 0;
 			subY[3] = -1;
 		}
